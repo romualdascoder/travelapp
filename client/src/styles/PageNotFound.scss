@@ -1,0 +1,52 @@
+@use "abstracts" as *;
+
+.errorContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1rem 5rem 1rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $white-bg-color;
+  overflow: hidden;
+  @include customMaxBreakPoint(600) {
+    justify-content: center;
+  }
+  .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    font-size: 11rem;
+    max-width: 430px;
+    width: 100%;
+    min-height: 100px;
+    @include customMaxBreakPoint(600) {
+      padding: 1rem;
+      font-size: 4rem;
+    }
+    svg {
+      font-size: 8.5rem;
+      margin: 0rem 1rem 1rem 1rem;
+      @include customMaxBreakPoint(600) {
+        font-size: 3.5rem;
+      }
+    }
+  }
+  .errorMessage {
+    text-align: center;
+    font-size: 2rem;
+    max-width: 580px;
+    @include customMaxBreakPoint(600) {
+      font-size: 1.5rem;
+    }
+    p {
+      padding: 0.2rem;
+
+      a {
+        text-decoration: none;
+        color: $title-color !important;
+      }
+    }
+  }
+}

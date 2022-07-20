@@ -1,0 +1,20 @@
+@use "abstracts" as *;
+
+footer {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  min-height: 45px;
+  @include set-background($footer-bg-color);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  .copyright {
+    p {
+      padding: 0rem 1rem;
+      font-size: 0.75rem;
+    }
+  }
+}

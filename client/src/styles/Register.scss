@@ -1,0 +1,65 @@
+@use "abstracts" as *;
+
+.registerContainer {
+  width: 300px;
+  height: 250px;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: $white-bg-color;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include smMaxBreakPoint {
+    width: 250px;
+    padding: 0.5rem;
+  }
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    color: $title-color;
+    font-weight: 700;
+  }
+  form {
+    height: 210px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: $addForm-title-color;
+    input {
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid $border-color;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .btn {
+    @extend %btn;
+  }
+  .successMsg {
+    font-size: 0.7rem;
+    color: $success-msg;
+    text-align: center;
+  }
+  .failureMsg {
+    font-size: 0.7rem;
+    color: $error;
+    text-align: center;
+  }
+  .cancelBtn {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    cursor: pointer;
+  }
+}

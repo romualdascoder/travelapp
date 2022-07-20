@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+%btn {
+  border: none;
+  padding: 7px;
+  background-color: $button-color;
+  color: $button-txt-color;
+  cursor: pointer;
+}
+
+.btn-primary {
+  @extend %btn;
+}

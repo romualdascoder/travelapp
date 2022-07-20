@@ -1,0 +1,13 @@
+@use "./styles/abstracts" as *;
+
+.App {
+  background-color: $white-bg-color;
+  @include customMaxBreakPoint(250) {
+    overflow: scroll;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}

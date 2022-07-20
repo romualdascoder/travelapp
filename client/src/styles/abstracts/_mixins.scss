@@ -1,0 +1,39 @@
+@use "variables" as *;
+@use "config" as *;
+
+// Breakpoints
+@mixin smMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-sm}) {
+    @content;
+  }
+}
+
+@mixin smdMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-smd}) {
+    @content;
+  }
+}
+
+@mixin lmdMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-lmd}) {
+    @content;
+  }
+}
+
+@mixin lgMaxBreakPoint {
+  @media screen and (max-width: #{$screen-mobile-lg}) {
+    @content;
+  }
+}
+
+@mixin customMaxBreakPoint($size) {
+  @media screen and (max-width: $size+"px") {
+    @content;
+  }
+}
+
+// Set background & text color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
